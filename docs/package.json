@@ -7,12 +7,15 @@
     "gitbook-cli": "^2.3.0",
     "gitbook-plugin-bulk-redirect": "^0.2.1",
     "gitbook-plugin-gtm": "0.0.6",
-    "gitbook-plugin-scripts": "^1.0.2"
+    "gitbook-plugin-scripts": "^1.0.2",
+    "snyk": "^1.316.1"
   },
   "scripts": {
     "postinstall": "gitbook install",
     "build": "gitbook build",
-    "start": "gitbook serve"
+    "start": "gitbook serve",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -24,5 +27,6 @@
     "url": "https://github.com/datawire/telepresence/issues"
   },
   "homepage": "https://github.com/datawire/telepresence#readme",
-  "devDependencies": {}
+  "devDependencies": {},
+  "snyk": true
 }
